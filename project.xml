@@ -1,0 +1,40 @@
+<project type="bio">
+  <property name="target.model" value="genomic"/>
+  <property name="common.os.prefix" value="common"/>
+  <sources>
+
+    <source name="miRBase" type="miRBase">
+    	<property name="src.data.dir" location="/home/flavioli/intermirmine/data/miRBase"/>
+    </source>
+
+    <source name="mirnaDiffExpression" type="mirnaDiffExpression">
+      <property name="mappingfilename" value="/home/flavioli/intermirmine/data/DE_smallRNA/MappingFileName.txt"/>
+      <property name="src.data.dir" location="/home/flavioli/intermirmine/data/DE_smallRNA"/>
+      <property name="src.data.dir.includes" value="*_EdgeR_DE.txt"/>
+    </source>
+
+    <source name="geneDiffExpression" type="geneDiffExpression">
+      <property name="mappingfilename" value="/home/flavioli/intermirmine/data/DE_mRNA/MappingFileName.txt"/>
+      <property name="src.data.dir" location="/home/flavioli/intermirmine/data/DE_mRNA"/>
+      <property name="src.data.dir.includes" value="*.deseq2"/>
+    </source>
+
+    <source name="entrez-organism" type="entrez-organism">
+      <property name="src.data.file" location="organisms.xml"/>
+    </source>
+
+    <!--
+    	<property name="src.data.file" location="/home/flavioli/intermirmine/data/miRBase/miRNA_hsa.tsv"/>
+-->
+
+
+  </sources>
+
+  <post-processing>
+
+
+
+  </post-processing>
+
+</project>
+
